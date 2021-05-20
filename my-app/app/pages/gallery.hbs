@@ -1,0 +1,46 @@
+<div class="profile_page">
+
+
+{{!-- <img src="image_placeholder.png" class="img"> --}}
+
+
+<h1 object key:page-desc="@innerText" edit:page-desc> Your Name </h1>
+
+
+<p object key:pronouns="@innerText" edit:pronouns> Pronouns </p>
+
+<div class="posts" object>
+  <ul array key="todos" sortable class="posts">
+    {{#for todo in todos}}
+      <li 
+        object 
+        key:text="@innerText"
+        edit:text
+        class="fixed block" 
+      >{{default todo.text "I am building..."}}</li>
+    {{/for}}
+  </ul>
+  
+     {{#for todos in todos}}
+      <li 
+        object 
+        key:aravtext="@innerText"
+        edit:aravtext
+        class="accent block fixed"
+      >{{default todos.text "I am creating..."}}</li>
+    {{/for}}
+  </ul>
+    
+    {{#if currentUser}}
+  <button new:todo class="block accent">Create new story</button>
+  <button new:todos class="block accent">What are you creating?</button>
+</div>
+
+
+
+</div>
+
+
+
+
+

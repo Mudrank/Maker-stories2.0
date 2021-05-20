@@ -1,0 +1,52 @@
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/blocks.css/dist/blocks.min.css" />
+
+<!--- This is from remake --!>
+
+<!-- This element is converted into an object -->
+
+
+
+
+
+<h1 object key:page-title="@innerText" edit:page-title>page title here
+</h1><br/>
+<h3 object key:page-desc="@innerText" edit:page-desc>bio here
+</h1>
+</div>
+</div>
+
+
+
+<div class="posts" object>
+  <ul array key="todos" sortable class="posts">
+    {{#for todo in todos}}
+      <li 
+        object 
+        key:text="@innerText"
+        edit:text
+        class="accent block" 
+      >{{default todo.text "I am building..."}}</li>
+    {{/for}}
+  </ul>
+  
+     {{#for todos in todos}}
+      <li 
+        object 
+        key:aravtext="@innerText"
+        edit:aravtext
+        class="accent block"
+      >{{default todos.text "I am creating..."}}</li>
+    {{/for}}
+  </ul>
+    
+    {{#if currentUser}}
+  <button new:todo class="block accent">Create new story</button>
+  <button new:todos class="block accent">What are you creating?</button>
+</div>
+{{else}}
+     
+    {{/if}}
+

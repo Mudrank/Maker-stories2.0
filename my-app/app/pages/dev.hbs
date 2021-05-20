@@ -1,0 +1,15 @@
+<h1>Maker Profiles</h1>
+<br><br><br>
+</label>
+
+<ul>
+  <h2> Go check out this poll/vote your thoughts </h1>
+  <p> Share your Story, with the world. </p>
+  <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Here&#39;s the Idea, (cc <a href="https://twitter.com/mudrankgupta?ref_src=twsrc%5Etfw">@mudrankgupta</a>):<br><br>I want to build a site, where you can  and write your story.<br><br>Think Makers rocket, yet for you. Still need to build the rough MVP to show.</p>&mdash; 🚀 Arav ⠕ (@HeyArav) <a href="https://twitter.com/HeyArav/status/1394338771420827649?ref_src=twsrc%5Etfw">May 17, 2021</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+  {{#if currentUser}}
+    <li><a href="/{{currentUser.details.username}}">Go to your dashboard</a></li>
+  {{else}}
+  <br>
+    <li><a href="/user/signup">Reserve your Username</a></li>
+  {{/if}}
+</ul>
